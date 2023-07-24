@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <>
-            <header className="text-gray-600 body-font">
+            <header className="text-gray-600 body-font bg-white sticky top-0 z-10 backdrop-filter backdrop-blur-md">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                         <svg
@@ -18,17 +19,18 @@ const Navbar = () => {
                         >
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                         </svg>
-                        <span className="ml-3 text-xl">Fact Shala</span>
+                        <span className="ml-3 text-xl">{props.title}</span>
                     </a>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                        <a className="mr-5 hover:text-gray-900">First Link</a>
-                        <a className="mr-5 hover:text-gray-900">Second Link</a>
-                        <a className="mr-5 hover:text-gray-900">Third Link</a>
-                        <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+                        <Link to='/business' className="mr-5 hover:text-gray-900" >Business</Link>
+                        <Link to='/entertainment' className="mr-5 hover:text-gray-900">Entertainment</Link>
+                        <Link to='/general' className="mr-5 hover:text-gray-900">General</Link>
+                        <Link to='/health' className="mr-5 hover:text-gray-900">Health</Link>
+                        <Link to='/science' className="mr-5 hover:text-gray-900">Science</Link>
+                        <Link to='/technology' className="mr-5 hover:text-gray-900">Technology</Link>
                     </nav>
                 </div>
             </header>
-
         </>
     )
 }
