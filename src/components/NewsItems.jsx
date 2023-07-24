@@ -12,7 +12,7 @@ const NewsItems = (props) => {
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{props.title}</div>
                     <p className="text-gray-700 text-base">
-                        {props.description.slice(0,95)}.....
+                        {props.description}
                     </p>
                 </div>
                 <div className='px-6'>
